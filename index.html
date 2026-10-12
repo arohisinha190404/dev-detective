@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-Detective | GitHub Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">Dev<span>-Detective</span></a>
+    <span class="api-label">Powered by GitHub REST API</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">DEVELOPER DISCOVERY TOOL</p>
+      <h1>Meet the minds<br>behind the <span>code.</span></h1>
+      <p class="subtitle">
+        Explore GitHub profiles, discover repositories, and compare developers.
+      </p>
+
+      <form id="searchForm" class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="username" placeholder="Enter GitHub username..." required>
+        <button type="submit">Search Profile</button>
+      </form>
+
+      <label class="battle-toggle">
+        <input type="checkbox" id="battleToggle">
+        <span>Enable Battle Mode</span>
+      </label>
+
+      <form id="battleForm" class="battle-form hidden">
+        <input id="userOne" placeholder="First username" required>
+        <span class="versus">VS</span>
+        <input id="userTwo" placeholder="Second username" required>
+        <button type="submit">Compare</button>
+      </form>
+    </section>
+
+    <div id="status" role="status" aria-live="polite"></div>
+    <section id="profiles" class="profiles"></section>
+    <section id="repositories" class="repositories"></section>
+
+    <footer>
+      Built with HTML, CSS, JavaScript & GitHub REST API
+    </footer>
+  </main>
+</body>
+</html>
